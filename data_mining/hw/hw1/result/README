@@ -1,0 +1,11 @@
+# Introduction to Data Mining - Homework 1
+
+* Student ID : 2013-11434
+* Name : Kiroong Choe
+* How to run
+    1. locate the input file('problem.edge') in the same directory of this file.
+    2. run 'make in' to compute in-degree of each node, which will save the result in 'output_indeg.txt'.
+    3. run 'make out' to compute out-degree of each node, which will save the result in 'output_outdeg.txt'.
+    4. run 'make in_dist' to compute in-degree distribution of the dataset, which will save the result in 'output_indeg_dist.txt'.
+    5. run 'make out_dist' to compute out-degree distribution of the dataset, which will save the result in 'output_outdeg_dist.txt'.
+    6. run 'make all' to execute 2~5 at once.

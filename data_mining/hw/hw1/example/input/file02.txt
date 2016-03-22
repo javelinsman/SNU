@@ -1,0 +1,22 @@
+ALPHAGO - THE FIRST COMPUTER PROGRAM TO EVER BEAT A PROFESSIONAL PLAYER AT GO
+Match Begins!
+The second match of the Google DeepMind challenge match starts later today in Seoul, South Korea at
+13:00 KST; 04:00 GMT-1 day (8th March) 20:00 PT, 23:00 ET. Tune in live.
+Our first match was a historic moment. AlphaGo beat Lee Sedol, the first computer program to ever beat a 9 dan professional player. 95,000 viewers tuned in live and a further 1,250,259 viewers have watched the recording already!
+For updates each day on the Google DeepMind Challenge Match of AlphaGo vs Lee Sedol, please follow the Google APAC blog and the DeepMind YouTube channel.
+Match Details
+In October 2015, our program AlphaGo won 5-0 in a formal match against the reigning 3-times European Champion, Fan Hui, to become the first program to ever beat a professional Go player in an even game.
+Now AlphaGo will face its ultimate challenge: a 5-game challenge match in Seoul against the legendary Lee Sedol, the top Go player in the world over the past decade. For full details, please see our press release.
+The matches will be held at the Four Seasons Hotel, Seoul, South Korea, starting at 1pm local time
+(4am GMT; day before 11pm ET, 8pm PT) on March 9th, 10th, 12th, 13th and 15th.
+The matches will be livestreamed on DeepMind’s YouTube channel as well as broadcast on TV throughout Asia through Korea’s Baduk TV, as well as in China, Japan, and elsewhere.
+Match commentators will include Michael Redmond, the only professional Western Go player to achieve
+9 dan status. Redmond will commentate in English, and Yoo Changhyuk professional 9 dan, Kim Sungryong professional 9 dan, Song Taegon professional 9 dan, and Lee Hyunwook professional 8 dan will commentate in Korean alternately.
+The matches will be played under Chinese rules with a komi of 7.5 (the compensation points the player who goes second receives at the end of the match). Each player will receive two hours per match with three lots of 60-second byoyomi (countdown periods after they have finished their allotted time).
+Each match is expected to take around 4-5 hours.
+Nature Paper Details
+Our Nature paper published on 28th January 2016, describes the technical details behind a new approach to computer Go that combines Monte-Carlo tree search with deep neural networks that have been trained by supervised learning, from human expert games, and by reinforcement learning from games of self-play.
+The game of Go is widely viewed as an unsolved “grand challenge” for artificial intelligence. Despite decades of work, the strongest computer Go programs still only play at the level of human amateurs. In this paper we describe our Go program, AlphaGo. This program was based on general-purpose AI methods, using deep neural networks to mimic expert players, and further improving the program by learning from games played against itself. AlphaGo won over 99% of games against the
+strongest other Go programs. It also defeated the human European champion by 5–0 in an official tournament match. This is the first time ever that a computer program has defeated a professional Go player, a feat previously believed to be at least a decade away.
+
+

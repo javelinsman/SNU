@@ -1,0 +1,76 @@
+=====
+1. Introduction
+
+This document is written for 'Homework 1' in 'Introduction to data mining'. In this document, we will describe the details of how to install and test Hadoop, and how to use Gnuplot for drawing your results. We do not provide more detailed things such as explanations for APIs of Hadoop or how to integrate Hadoop with your IDE. We believe that the below information is enough for you to perform this assignment. Please search references related to other information on the Web by yourself.
+
+=====
+2. Environment
+
+1) Operating system: although Hadoop works on Windows with several settings, Hadoop is easy-to-use in Linux systems. We strongly recommend using a Linux system such as Ubuntu, CentOS or OS X. If you are using Windows, try to utilize a virtual machine software such as VM ware or Virtual Box. We do not provide installation information on Windows in this document. This document is based on Ubuntu.
+
+2) JAVA: use the latest version.
+
+3) Hadoop: must use a version 2.7.2.
+
+======
+3. Install hadoop
+
+1) You first need to install JAVA. Please install JAVA and set the path to the installation directory of JAVA. Make sure that the 'echo ${JAVA_HOME}' command prints an appropriate path.  
+    * [Ubuntu] type the following commands in your terminal. 
+        - sudo apt-get-repository ppa:webup8team/java
+        - sudo apt-get update
+        - sudo apt-get install oracle-java9-installer
+    * [Ubuntu] add the following line in '~/.bashrc', and type 'source ~/.bashrc'.
+        - export JAVA_HOME="/usr/lib/jvm/java-9-oracle"
+        - export PATH="${PATH}:${JAVA_HOME}/bin"
+    
+2) Download 'hadoop-2.7.2.tar.gz', which contains binary files for hadoop, from the following link:
+    * http://apache.mirror.cdnetworks.com/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz
+    * [Ubuntu] try use the 'wget' command. (e.g., wget 'link')
+
+3) Extract 'hadoop-2.7.2.tar.gz' using the following command:
+    * [Ubuntu] tar xvf hadoop-2.7.2.tar.gz
+
+4) Then, you can see a directory named 'hadoop-2.7.2'. Let the path of the directory be HADOOP_HOME. Set the path ${HADOOP_HOME}/bin in your system. 
+    * [Ubuntu] after adding the following lines in '~/.bashrc', then type 'source ~/.bashrc' in your terminal.
+        - export HADOOP_HOME='hadoop/installation/path'  # should modify it by an appropriate path
+        - export PATH="${PATH}:${HADOOP_HOME}/bin"
+        
+5) Type 'hadoop' in your terminal. If the paths are set correctly, help messages for 'hadoop' will be shown in the terminal. If your system cannot find the command, please check if the paths are correctly written at Step 4). 
+
+=====
+4. Test your hadoop
+
+1) To check if your hadoop works well, you can use the WordCount code in the 'example' folder. There is the 'WordCount.java' code, which is the implementation of WordCount on MapReduce framework.   
+
+2) Move to the 'example' directory. 
+
+3) To compile the source code, type 'make compile'. Then, you can see three class files. This command performs the following hadoop command:
+    * hadoop com.sun.tools.javac.Main WordCount.java
+    
+4) To make a jar file from the class files, type 'make jar'. Now, you can see the 'WordCount.jar' file. This command performs the following jar command:
+    * jar cf WordCount.jar WordCount*.class
+
+5) To run the jar file on your hadoop, type 'make run'. If the hadoop runs successfully, there is the 'output.txt' file. This command counts the number of distinct words in two files in the 'intput' folder. This command consists of the following hadoop commands:
+    * hadoop jar WordCount.jar WordCount ./input ./output
+        - Run WordCount class in 'WordCount.jar' given './input.txt' with the output folder '/output'
+    * hadoop fs -cat output/part-r-00000
+        - Print the content of the 'part-r-00000' file in your terminal.
+    * hadoop fs -get output/part-r-00000 output.txt
+        - Write the result 'part-r-00000', which is stored in HDFS, into 'output.txt', which will be stored in your local system. 
+
+6) Check the content of 'output.txt'. You can also perform the whole steps in this section by typing only one command: 'make'.   
+
+=====
+5. How to draw a plot using Gnuplot
+
+1) Install Gnuplot (e.g., for ubuntu users, type 'sudo apt-get install gnuplot').
+
+2) Move to the 'plot' directory. There are 'Makefile', 'data.txt', and 'degreedist.plt'.
+
+3) Type 'make'. Then, a pdf file is generated. The file contains a plot for 'data.txt' (a degree distribution of an example dataset).
+
+4) You need to modify the 'degreedist.plf' file to draw a plot for another data. 
+
+
+
