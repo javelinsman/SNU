@@ -15,7 +15,7 @@ int least_zero_index(int d){
 int main(){
     srand(time(NULL));
     int cnt[33] = {};
-    int a = rand(), b = rand();
+    int a = rand() | 1, b = rand();
     for(int i=0;i<1000000;i++){
         int x = rand();
         int t;
